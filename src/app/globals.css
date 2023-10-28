@@ -9,10 +9,6 @@
 }
 
 img{
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-    max-height: 350px;
     transition: .3s ease all;
     -webkit-transition: .3s ease all;
     -moz-transition: .3s ease all;
