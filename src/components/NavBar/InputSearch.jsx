@@ -11,13 +11,14 @@ export const InputSearch = () => {
     function handleSearch(event){
         event.preventDefault()
         const keyword = searchRef.current.value
-        
+
         router.push(`/search/${keyword}`)
-        searchRef.current.value = "";
+        // searchRef.current.value = "";
     }
     return (
         <form className="relative">
             <input 
+            required
             className="p-2 rounded w-full" 
             placeholder="cari anime..." 
             ref={searchRef}
