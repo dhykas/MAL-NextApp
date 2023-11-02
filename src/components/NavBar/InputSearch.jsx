@@ -18,7 +18,7 @@ export const InputSearch = () => {
     return (
         <form className="relative">
             <input 
-            required
+            required    
             className="p-2 rounded w-full" 
             placeholder="cari anime..." 
             ref={searchRef}
