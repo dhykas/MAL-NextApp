@@ -13,11 +13,18 @@ export const Pagination = ({ page, setPage, lastPage }) => {
         setPage((prev) => prev + p)
         scrollTop()
     }
+    
+    function gotTo(p){
+        setPage(p)
+    }
+
     return(
         <div className="flex justify-center items-center py-4 px-2 gap-4 text-color-primary text-2xl">
-            <button onClick={() => pagination(-1)} className="transition-all hover:text-color-accent">Prev</button>
+            <button onClick={() => gotTo(1)} className="transition-all hover:text-color-accent">{'<<'}</button>
+            <button onClick={() => pagination(-1)} className="transition-all hover:text-color-accent">{'<'}</button>
             <p>{page} of {lastPage}</p>
-            <button onClick={() => pagination(1)} className="transition-all hover:text-color-accent">Next</button>
+            <button onClick={() => pagination(1)} className="transition-all hover:text-color-accent">{'>'}</button>
+            <button onClick={() => gotTo(lastPage)} className="transition-all hover:text-color-accent">{'>>'}</button>
         </div>
     )
 }
